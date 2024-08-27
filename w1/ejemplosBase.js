@@ -53,9 +53,7 @@ function printNumbers(...numbers) {
 
 printNumbers(1, 2, 3, 4, 5); // 1 2 3 4 5
 
-// API Fetch (Using node-fetch)
-const fetch = require('node-fetch');
-
+// API Fetch (Using Node.js built-in fetch)
 async function getUserData() {
     try {
         const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
@@ -89,6 +87,6 @@ function greet() {
 }
 module.exports = { myName, greet };
 
-// file2.js
-const { myName, greet } = require('./file1');
-console.log(greet()); // Hello, John
+// file2.js uncomment this in another file
+//const { myName, greet } = require('./file1');
+//console.log(greet()); // Hello, John
