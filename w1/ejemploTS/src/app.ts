@@ -1,5 +1,5 @@
 // Variables Definition
-const name: string = 'John Doe';  // Constant variable
+const nameUser: string = 'John Doe';  // Constant variable
 let age: number = 30;             // Let variable
 let isStudent: boolean = true;    // Let variable (using let instead of var in TypeScript)
 
@@ -112,5 +112,5 @@ export function greet(): string {
 }
 
 // file2.ts
-import { myName, greet } from './file1';
-console.log(greet()); // Hello, John
+// import { myName, greet } from './file1';
+// console.log(greet()); // Hello, John
