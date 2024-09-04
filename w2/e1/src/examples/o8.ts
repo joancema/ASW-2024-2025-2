@@ -1,5 +1,5 @@
 import * as http from "http"
-import { request, RequestOptions } from 'http';
+import { request, RequestOptions, IncomingMessage } from 'http';
 
 interface ApiResponse {
   statusCode: number;
@@ -11,7 +11,7 @@ export function fetchData(url: string, callback: (error: Error | null, response?
   const options: RequestOptions = {
     method: 'GET',
   };
-  const req = request(url, options, (res) => {
+  const req = request(url, options, (res:IncomingMessage) => {
     let data = '';
     res.on('data', (chunk) => {
       data += chunk;
@@ -25,10 +25,8 @@ export function fetchData(url: string, callback: (error: Error | null, response?
       callback(null, result);
     });
   });
-
   req.on('error', (error) => {
     callback(error);
   });
-
   req.end();
 }
