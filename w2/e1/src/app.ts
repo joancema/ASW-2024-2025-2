@@ -15,13 +15,13 @@
 // import operation from './examples/o5'
 // operation(1, 2, (num1, num2) => num1 + num2, (result) => console.log(result))
 // 6 import export class connect HTTP client
-// import { fetchData, IPost  } from './examples/o6'
+import { fetchData, IPost  } from './examples/o6'
 // fetchData<IPost[]>('https://jsonplaceholder.typicode.com/posts')
 // .then((data:IPost[]) => console.log(data[0].title));
-// (async ()=>{
-//     let data = await fetchData<IPost[]>('https://jsonplaceholder.typicode.com/posts');
-//     console.log(data[0].title);
-// })()
+(async ()=>{
+    let data = await fetchData<IPost[]>('https://jsonplaceholder.typicode.com/posts');
+    console.log(data[0].title);
+})()
 // 7 import export callback, promises and async/await
 // import { students, IStudent } from './examples/o7'
 
@@ -43,13 +43,13 @@
 //8 import export http module
 
 // Example usage:
-import { fetchData } from './examples/o8';
-fetchData('http://jsonplaceholder.typicode.com/posts', (error, response) => {
-  if (error) {
-    console.error('Error:', error);
-  } else if (response) {
-    console.log(`Status Code: ${response.statusCode}`);
-    console.log('Headers:', response.headers);
-    console.log('Data:', response.data);
-  }
-});
+// import { fetchData } from './examples/o8';
+// fetchData('http://jsonplaceholder.typicode.com/posts', (error, response) => {
+//   if (error) {
+//     console.error('Error:', error);
+//   } else if (response) {
+//     console.log(`Status Code: ${response.statusCode}`);
+//     console.log('Headers:', response.headers);
+//     console.log('Data:', response.data);
+//   }
+// });
