@@ -5,3 +5,4 @@ export {operationGenerica}  from './ejemplo3';
 export {buscarDeporte, buscarCategoria, buscarPais} from './callback';
 export {buscarDeportePromise, buscarCategoriaPromise} from './promises';
 export {buscarDeporteAsyncAwait, buscarCategoriaAsyncAwait} from './asyncAwait';
+export {IPost, fetchData} from './posts';

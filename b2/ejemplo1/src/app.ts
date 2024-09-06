@@ -1,19 +1,38 @@
-import { buscarCategoriaAsyncAwait, buscarDeporteAsyncAwait } from './ejemplos';
+import { IPost, fetchData } from './ejemplos';
 
 
 
-async function main() {
-    try {
-        const deporte = await buscarDeporteAsyncAwait(1);
-        console.log(deporte);
-        const categoria = await buscarCategoriaAsyncAwait(deporte.categoriaId);
-        console.log(categoria);
-    } catch (error) {
-        console.error(error);
-    }
-}
+(async ()=>{
+    const response=await fetchData<IPost>('https://jsonplaceholder.typicode.com/posts');
+    console.log(response)
+})()
 
-main();
+
+
+
+
+// fetchData<IPost>('https://jsonplaceholder.typicode.com/posts')
+//     .then(posts => {
+//         console.log(posts);
+//     })
+//     .catch(error => console.error(error));
+
+// import { buscarCategoriaAsyncAwait, buscarDeporteAsyncAwait } from './ejemplos';
+
+
+
+// async function main() {
+//     try {
+//         const deporte = await buscarDeporteAsyncAwait(1);
+//         console.log(deporte);
+//         const categoria = await buscarCategoriaAsyncAwait(deporte.categoriaId);
+//         console.log(categoria);
+//     } catch (error) {
+//         console.error(error);
+//     }
+// }
+
+// main();
 
 
 // import { buscarCategoriaPromise, buscarDeportePromise } from './ejemplos';
