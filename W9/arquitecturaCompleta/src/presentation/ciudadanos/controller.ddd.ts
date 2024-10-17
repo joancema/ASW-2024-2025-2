@@ -50,7 +50,7 @@ export class CiudadanosController {
   };
 
 
-  public deleteTodo = async ( req: Request, res: Response ) => {
+  public deleteCiudadano = async ( req: Request, res: Response ) => {
     const id = +req.params.id;
     const deletedTodo = await this.ciudadanoRepository.deleteById( id );
     res.json( deletedTodo );
