@@ -15,8 +15,15 @@ export class CiudadanoDatasourceImpl implements CiudadanoDatasource {
   }
 
   async getAll(): Promise<CiudadanoEntity[]> {
-    const ciudadanos = await prisma.ciudadano.findMany();
-    return ciudadanos.map( ciudadano => CiudadanoEntity.fromObject(ciudadano) );
+    try {
+      const ciudadanos = await prisma.ciudadano.findMany();
+      return ciudadanos.map( ciudadano => CiudadanoEntity.fromObject(ciudadano) );
+    }
+    catch (error) {
+      console.log(error);
+      throw new Error('Error al obtener los ciudadanos');
+    }
+    
   }
 
   async findById( id: number ): Promise<CiudadanoEntity> {

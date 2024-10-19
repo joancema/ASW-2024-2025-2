@@ -1,7 +1,8 @@
 import { Router } from 'express';
 // import { CiudadanosController } from './controller';
 import { CiudadanosController } from './controller.ddd';
-import { CiudadanoDatasourceImpl } from '../../infrastructure/datasource/ciudadano.datasource.impl';
+// import { CiudadanoDatasourceImpl } from '../../infrastructure/datasource/ciudadano.datasource.impl';
+import { CiudadanoDatasourceImpl } from '../../infrastructure/datasource/ciudadano.datasourcem.impl';
 import { CiudadanoRepositoryImpl } from '../../infrastructure/repositories/ciudadano.repository.impl';
 
 
