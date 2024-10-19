@@ -1,5 +1,4 @@
 import { Request, Response } from 'express';
-import { prisma } from '../../data/postgres';
 import { CreateCiudadanoDto, UpdateCiudadanoDto } from '../../domain/dtos';
 import { CreateCiudadano, DeleteCiudadano, GetCiudadano, GetCiudadanos, CiudadanoRepository, UpdateCiudadano } from '../../domain';
 
