@@ -9,3 +9,7 @@ export * from './preguntas/update-pregunta.dto';
 
 export * from './users/create-user.dto';
 export * from './users/update-user.dto';
+
+
+export * from './students/create-student.dto';
+export * from './students/update-student.dto';
