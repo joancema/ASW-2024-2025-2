@@ -12,4 +12,8 @@ async function main() {
 const schema = new mongoose.Schema({ nombre: String });
 const Ciudadano = mongoose.model('ciudadano', schema);
 
-export { Ciudadano };
+const schemaUser = new mongoose.Schema({ nombre: String });
+const User = mongoose.model('user', schemaUser);
+
+
+export { Ciudadano, User };
