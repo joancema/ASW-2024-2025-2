@@ -1,9 +1,11 @@
 import mongoose from 'mongoose';
+import { envs } from '../../config/envs';
 
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://root:root@localhost:27017/test?authSource=admin');
+  await mongoose.connect(  envs.MONGO_URL);
+  console.log('Conectado a la base de datos', envs.MONGO_URL);
   
 }
 
