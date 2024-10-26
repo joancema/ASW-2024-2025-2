@@ -1,0 +1,30 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Ciudadano {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Query {
+  ciudadanos: [Ciudadano!]!
+  ciudadano(id: Int!): Ciudadano!
+}
+
+type Mutation {
+  createCiudadano(createCiudadanoInput: CreateCiudadanoInput!): Ciudadano!
+  updateCiudadano(updateCiudadanoInput: UpdateCiudadanoInput!): Ciudadano!
+  removeCiudadano(id: Int!): Ciudadano!
+}
+
+input CreateCiudadanoInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateCiudadanoInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
