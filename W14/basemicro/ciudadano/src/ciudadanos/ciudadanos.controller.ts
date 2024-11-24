@@ -13,7 +13,7 @@ export class CiudadanosController {
     return this.ciudadanosService.create(createCiudadanoDto);
   }
 
-  @MessagePattern('findAllCiudadanos')
+  @MessagePattern({ cmd: 'find_all_ciudadanos' })
   findAll() {
     return this.ciudadanosService.findAll();
   }

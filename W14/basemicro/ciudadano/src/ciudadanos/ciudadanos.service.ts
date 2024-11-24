@@ -2,6 +2,20 @@ import { Injectable } from '@nestjs/common';
 import { CreateCiudadanoDto } from './dto/create-ciudadano.dto';
 import { UpdateCiudadanoDto } from './dto/update-ciudadano.dto';
 
+
+const ciudadanos = [
+  {
+    id: 1,
+    nombre: 'Juan',
+    email: 'prueba@hotmail.com'
+  }, 
+  {
+    id: 2,
+    nombre: 'Pedro',
+    email: 'pedro@hot.com'
+  }
+  ]
+
 @Injectable()
 export class CiudadanosService {
   create(createCiudadanoDto: CreateCiudadanoDto) {
@@ -9,7 +23,7 @@ export class CiudadanosService {
   }
 
   findAll() {
-    return `This action returns all ciudadanos`;
+    return ciudadanos;
   }
 
   findOne(id: number) {
